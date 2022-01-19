@@ -1,0 +1,90 @@
+html{
+    height: 100%;
+    margin: 0;
+}
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(45deg, red, blue);
+}
+#calculator {
+    height: 30rem;
+    width: 21rem;;
+    border: 0.5em solid rgb(0, 3, 48);
+    display: grid;
+    grid-template: 1fr 4fr / 1fr;
+    grid-template-areas: 
+    "screen"
+    "buttons"
+    "buttons"
+    "buttons"
+    "buttons";
+}
+
+button {
+    border-radius: 7px;
+}
+
+#buttons {
+    grid-area: buttons;
+    display: grid;
+    grid-template: 4fr 1fr / 1fr;
+    grid-template-areas:
+    "row"
+    "lastrow";
+}
+
+#firstfourrows {
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    grid-area: row;
+    background-color: black;
+}
+
+#lastrow {
+    grid-area: lastrow;
+    display: grid;
+    background-color: black;
+    grid-template: 1fr / 2fr 1fr 1fr;
+}
+
+#screenwrapper {
+    grid-area: screen;
+    border: 0.5em solid rgb(33, 61, 121);
+    background-color: rgb(255, 191, 57);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#screen {
+    font-family: 'Oxanium', cursive;
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+}
+
+.operator {
+    font-family: 'Oxanium', cursive;
+    font-size: 1.75em;
+    color: rgb(255, 173, 0);
+    background-color: rgb(14, 46, 133);
+}
+
+.clear {
+    font-family: 'Oxanium', cursive;
+    font-size: 1.75em;
+    color: rgb(255, 222, 0);
+    background-color: rgb(19, 60, 172);
+}
+
+.number {
+    font-family: 'Oxanium', cursive;
+    font-weight: 800;
+    font-size: 1.75em;
+    color: rgb(211, 174, 0);
+    background-color: rgb(9, 35, 105);
+}
